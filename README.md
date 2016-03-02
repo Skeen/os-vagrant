@@ -1,7 +1,8 @@
-# RancherOS Vagrant
+# RancherOS Vagrant - Swarm
 
-Quickly checkout RancherOS using Vagrant/Virtualbox.
+Quickly setup a RancherOS swarm using using Vagrant/Virtualbox.
 
+This project is based upon 'RancherOS Vagrant', check it out at; [rancher/os-vagrant](https://github.com/rancher/os-vagrant)
 
 ## Getting started
 1.) Install dependencies
@@ -12,52 +13,17 @@ Quickly checkout RancherOS using Vagrant/Virtualbox.
 2.) Clone this project
 
 ```
-git clone https://github.com/rancher/os-vagrant.git
+git clone https://github.com/Skeen/os-vagrant
 cd os-vagrant
 ```
 
 3.) Up and Running
 
 ```
-vagrant up
-vagrant ssh
+./setup-cluster.sh
 ```
 
 Start running Docker like you usually would!
-
-## Enable Rsync folder sync
-If you want to sync the current working directory via rsync edit the Vagrantfile and change this line:
-
-<pre>$rsync_folder_disabled = true</pre>
-
-to
-
-<pre>
-$rsync_folder_disabled = <b>false</b>
-</pre>
-## Upgrading RancherOS Versions
-
-To upgrade the Vagrant box, refresh this repository from master.
-
-```
-vagrant destroy
-vagrant box remove rancheros
-vagrant up
-```
-
-
-### Customizing and configuring
-
-
-To get a feel for how things work under the hood checkout the 
-[RancherOS Repo](https://github.com/rancherio/os) for details.
-
-## Contact
-For bugs, questions, comments, corrections, suggestions, etc., open an issue in
- [rancher/os](//github.com/rancher/os/issues) with a title starting with `[os-vagrant] `.
-
-Or just [click here](//github.com/rancher/os/issues/new?title=%5Bos-vagrant%5D%20) to create a new issue.
-
 
 # License
 Copyright (c) 2014-2015 [Rancher Labs, Inc.](http://rancher.com)
